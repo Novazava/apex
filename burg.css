@@ -1,0 +1,172 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: var(--tg--theme-text-color);
+    background: var(--tg--theme-bg-color);
+    font-family: Arial, sans-serif;
+    align-items: center;
+    height: 130vh;
+}
+
+main {
+    min-height: 100vh; /* Задает минимальную высоту для основного содержимого */
+    padding-bottom: 120px; /* Добавляем нижний отступ для создания пространства */
+}
+
+
+.header {
+    position: fixed; /* Закрепляем блок в верхней части */
+    top: 0;
+    width: 25%;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы блок был поверх других элементов */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    font-size: 14px
+
+}
+
+.logo img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+
+.menu {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    padding-left: 0px;
+
+}
+
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.phone-link img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+main {
+    padding-top: 60px; /* Отступ сверху для основного контента, чтобы он не перекрывался хедером */
+}
+
+
+
+/* Стили для слайдера */
+#slider-container {
+    width: 600px;
+    margin: 0 auto;
+}
+#slider {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px; /* Добавим отступ сверху */
+    margin-left: 55px;
+}
+#slider ul {
+    width: 300%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: left 0.5s;
+}
+#slider ul li {
+    width: 33.33%;
+    height: 100%;
+    float: left;
+    display: block;
+}
+#slider ul li img {
+    width: 100%;
+    height: auto;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    padding: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 200px;
+    transition: background-color 0.3s;
+}
+
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#prev {
+    left: -10px; /* Поместим стрелку prev слева от слайдера */
+}
+
+#next {
+    right: -10px; /* Поместим стрелку next справа от слайдера */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.#slider a {
+    /* Ваши стили здесь */
+    text-decoration: none;
+    /* Другие стили */
+}
+
+
+@media only screen and (max-width: 600px) { /* Применить стили только на устройствах с шириной экрана до 600px (например, мобильных устройствах) */
+    .container {
+        max-width: 50%; /* Задаем максимальную ширину контейнера в 50% от ширины экрана */
+    }
+
+    .inner {
+        grid-template-columns: 1fr; /* Меняем количество столбцов в сетке на один */
+    }
+
+    /* Если нужно скрыть правую часть экрана, можно использовать display: none; для нужных элементов */
+    .pizza-container {
+        display: none;
+    }
+}
+
+
